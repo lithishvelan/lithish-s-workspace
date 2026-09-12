@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Human Stability Test - a playful patience test.">
+  <title>Human Stability Test</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="background-glow glow-one"></div>
+  <div class="background-glow glow-two"></div>
+
+  <header class="topbar">
+    <div class="brand">🧪 HUMAN STABILITY TEST</div>
+    <button id="themeBtn" class="icon-btn" aria-label="Toggle theme">🌙</button>
+  </header>
+
+  <main class="app">
+    <!-- START SCREEN -->
+    <section id="startScreen" class="screen active">
+      <div class="card hero-card">
+        <span class="eyebrow">TOTALLY SCIENTIFIC*</span>
+        <h1>How Patient<br><span>Are You?</span></h1>
+        <p class="lead">
+          A completely unnecessary test of your patience.
+          Follow the instructions. Stay calm. Probably.
+        </p>
+
+        <div class="rules">
+          <div>🧘 Stay calm</div>
+          <div>🖱️ Follow instructions</div>
+          <div>⏱️ Don't rush</div>
+          <div>😈 Expect nonsense</div>
+        </div>
+
+        <button id="startBtn" class="primary-btn">START THE TEST →</button>
+        <p class="tiny">*The science is questionable.</p>
+      </div>
+    </section>
+
+    <!-- TEST SCREEN -->
+    <section id="testScreen" class="screen">
+      <div class="hud">
+        <div>
+          <span class="hud-label">STABILITY</span>
+          <strong id="scoreText">100%</strong>
+        </div>
+        <div>
+          <span class="hud-label">TIME</span>
+          <strong id="timeText">0s</strong>
+        </div>
+        <div>
+          <span class="hud-label">LEVEL</span>
+          <strong id="levelText">1 / 5</strong>
+        </div>
+      </div>
+
+      <div class="progress-track">
+        <div id="progressBar" class="progress-bar"></div>
+      </div>
+
+      <div class="card test-card">
+        <span id="stageLabel" class="eyebrow">STAGE 1</span>
+        <h2 id="instruction">Click the button.</h2>
+        <p id="subInstruction" class="subtext">
+          This should be easy.
+        </p>
+
+        <div id="playArea" class="play-area">
+          <button id="actionBtn" class="action-btn">CLICK ME</button>
+        </div>
+
+        <p id="statusMessage" class="status-message">Everything is normal.</p>
+      </div>
+
+      <div class="stats">
+        <div class="mini-card">
+          <span>Clicks</span>
+          <strong id="clickText">0</strong>
+        </div>
+        <div class="mini-card">
+          <span>Wrong moves</span>
+          <strong id="mistakeText">0</strong>
+        </div>
+        <div class="mini-card">
+          <span>Best score</span>
+          <strong id="bestText">—</strong>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESULT SCREEN -->
+    <section id="resultScreen" class="screen">
+      <div class="card result-card">
+        <span class="eyebrow">TEST COMPLETE</span>
+        <div id="resultEmoji" class="result-emoji">🧘</div>
+        <h2 id="resultTitle">ZEN MASTER</h2>
+        <p id="resultDescription" class="lead"></p>
+
+        <div class="score-ring">
+          <div>
+            <strong id="finalScore">0%</strong>
+            <span>stability</span>
+          </div>
+        </div>
+
+        <div class="result-details">
+          <div><span>Time</span><strong id="finalTime">0s</strong></div>
+          <div><span>Clicks</span><strong id="finalClicks">0</strong></div>
+          <div><span>Wrong moves</span><strong id="finalMistakes">0</strong></div>
+        </div>
+
+        <p id="finalRoast" class="roast"></p>
+
+        <div class="result-actions">
+          <button id="againBtn" class="primary-btn">TRY AGAIN ↻</button>
+          <button id="shareBtn" class="secondary-btn">COPY RESULT</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Built with HTML • CSS • JavaScript
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
